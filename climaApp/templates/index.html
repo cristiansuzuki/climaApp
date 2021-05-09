@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+</head>
+
+<body>
+
+    <form method="POST"> {% csrf_token %}
+        <input type="text" class="form-control" name="city" placeholder="..." >
+        <button type="submit">pesquisar</button>
+    </form>
+
+ 
+
+  
+            <h4>Country Code : {{country_code}}</h4>
+            <h4><span>Temperature in Celsius :</span> {{temp}}</h4>
+            <h4>Feels like: {{feels_like}}</h4>
+            <h4><span>Pressure :</span> {{pressure}} </h4>
+            <h4><span>Humidity : </span> {{humidity}}</h4>
+            <h4><span>Forecast : </span> {{main}}
+            <h4><span>Description : </span> {{description}}</h4>
+ 
+
+<!-- 
+    <div>
+
+   
+    <table>
+        <thead>
+            <tr>
+                <th>Codigo do País</th>
+                <th>Graus Celsius</th>
+                <th>Sensação Térmica</th>
+                <th>Pressão</th>
+                <th>Umidade</th>
+                <th>Forecast (?)</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr>
+                <td>{{country_code}}</td>
+                <td>{{temp}}</td>
+                <td>{{feels_like}}</td>
+                <td>{{pressure}}</td>
+                <td>{{humidity}}</td>
+                <td>{{main}}</td>
+                <td>{{description}}</td>
+            </tr>
+        </tbody>
+    
+        </table>
+    </div> -->
+<!-- 
+        <h4><span class="badge badge-primary">Country Code :</span> {{country_code}}</h4>
+        <h4><span class="badge badge-primary">Temperature in Celsius :</span> {{temp}}</h4>
+        <h4><span class="badge badge-primary">Feels like :</span> {{feels_like}}</h4>
+        <h4><span class="badge badge-primary">Pressure :</span> {{pressure}} </h4>
+        <h4><span class="badge badge-primary">Humidity : </span> {{humidity}}</h4>
+        <h4><span class="badge badge-primary">Forecast : </span> {{main}}
+        <h4><span class="badge badge-primary">Description : </span> {{description}}</h4> -->
+ 
+
+</body>
+
+</html>
