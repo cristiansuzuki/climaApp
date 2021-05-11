@@ -7,7 +7,7 @@ import json
 def index(request):
     if request.method == 'POST':
         city = request.POST['city']
-        source = urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q=chicago&units=metric&appid=9f71ebf55a524813aad471af8983a1e3&lang=pt_br').read()
+        source = urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&appid=9f71ebf55a524813aad471af8983a1e3&lang=pt_br').read()
         list_of_data = json.loads(source)
 
         data = {
@@ -34,6 +34,6 @@ def index(request):
 def page_error(request):
     return render(request, "500.html")
 
-#Pagina de erro 400
+#Pagina de erro 500
 def page_error(request):
     return render(request, "400.html")
