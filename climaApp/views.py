@@ -33,3 +33,7 @@ def index(request):
 #Pagina de erro 500
 def page_error(request):
     return render(request, "500.html")
+
+#Pagina de erro 400
+def page_error(request):
+    return render(request, "400.html")
