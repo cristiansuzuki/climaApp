@@ -7,6 +7,7 @@ import json
 def index(request):
     if request.method == 'POST':
         city = request.POST['city']
+        city = '%20'.join(city.split(' '))
         source = urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&appid=9f71ebf55a524813aad471af8983a1e3&lang=pt_br').read()
         list_of_data = json.loads(source)
 
